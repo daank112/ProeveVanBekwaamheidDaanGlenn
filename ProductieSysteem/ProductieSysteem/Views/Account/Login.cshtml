@@ -22,7 +22,7 @@
                     <div class="form-group">
                         @Html.LabelFor(m => m.wachtwoord, new { @class = "col-md-4  control-label" })
                         <div class="col-md-12">
-                            @Html.TextBoxFor(m => m.wachtwoord , new { @class = "form-control" })
+                            @Html.PasswordFor(m => m.wachtwoord, new { @class = "form-control" })
                             @Html.ValidationMessageFor(m => m.wachtwoord, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -44,5 +44,3 @@
         </section>
     </div>
 </div>
-
-

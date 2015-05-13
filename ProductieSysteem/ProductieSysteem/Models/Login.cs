@@ -23,6 +23,8 @@ namespace ProductieSysteem.Models
         [Display(Name = "Remeber me on this computer")]
         public bool RememberMe { get; set; }
 
+        
+
        public bool IsValid(string _username, string _password)
         {
             DefaultConnection cn = new DefaultConnection();
