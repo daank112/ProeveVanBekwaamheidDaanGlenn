@@ -19,42 +19,12 @@ namespace ProductieSysteem.Controllers
 
         public ActionResult Index()
         {
-            var GebruikersList = from m in db.Gebruikers
-                                 where m.voornaam == "daan"
-                                 select m;
-            return View(GebruikersList.ToList());
+            //var GebruikersList = from m in db.Gebruikers
+            //                     where m.voornaam == "daan"
+            //                     select m;
+            //GebruikersList.ToList()
+            return View();
         }
-        public ActionResult Login()
-        {
-
-            if (Request.IsAuthenticated == true)
-            {
-                return RedirectToAction("Index", "Dashboard");
-            }
-            else
-            {
-                return View();
-            }
-        }
-        [HttpPost]
-        public ActionResult Login(Models.Login user)
-        {
-
-            if (ModelState.IsValid)
-            {
-                if (user.IsValid(user.gebruikersnaam, user.wachtwoord))
-                {
-
-                    FormsAuthentication.SetAuthCookie(user.gebruikersnaam, user.RememberMe);
-
-                    return RedirectToAction("Index", "Dashboard");
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Fout!");
-                }
-            }
-            return View(user);
-        }
+        
     }
 }
