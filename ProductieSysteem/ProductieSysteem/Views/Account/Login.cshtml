@@ -13,17 +13,17 @@
                 <div>
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     <div class="form-group">
-                        @Html.LabelFor(m => m.UserName, new { @class = "col-md-4  control-label" })
+                        @Html.LabelFor(m => m.gebruikersnaam, new { @class = "col-md-4  control-label" })
                         <div class="col-xs-12">
-                            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                            @Html.TextBoxFor(m => m.gebruikersnaam, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.gebruikersnaam, "", new { @class = "text-danger" })
                         </div>
                     </div>
                     <div class="form-group">
-                        @Html.LabelFor(m => m.Password, new { @class = "col-md-4  control-label" })
+                        @Html.LabelFor(m => m.wachtwoord, new { @class = "col-md-4  control-label" })
                         <div class="col-md-12">
-                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                            @Html.TextBoxFor(m => m.wachtwoord , new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.wachtwoord, "", new { @class = "text-danger" })
                         </div>
                     </div>
                     <div class="form-group">

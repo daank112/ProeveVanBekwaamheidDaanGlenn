@@ -19,6 +19,7 @@ namespace ProductieSysteem.Controllers
 
         public ActionResult Index()
         {
+<<<<<<< HEAD
          /*   var GebruikersList = from m in db.Gebruikers
                                  where m.voornaam == "daan"
                                  select m;*/
@@ -55,6 +56,14 @@ namespace ProductieSysteem.Controllers
                 }
             }
             return View(user);
+=======
+            //var GebruikersList = from m in db.Gebruikers
+            //                     where m.voornaam == "daan"
+            //                     select m;
+            //GebruikersList.ToList()
+            return View();
+>>>>>>> origin/master
         }
+        
     }
 }
