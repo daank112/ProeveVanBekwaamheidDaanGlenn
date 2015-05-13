@@ -23,14 +23,21 @@ namespace ProductieSysteem.Models
         [Display(Name = "Remeber me on this computer")]
         public bool RememberMe { get; set; }
 
-        public string GetUsernameById
+       public bool IsValid(string _username, string _password)
         {
-            get { return "Daan"; }
-            set { GetUsernameById = value; }
-        }
+            DefaultConnection cn = new DefaultConnection();
+            if (_username == gebruikersnaam || _password == wachtwoord)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+            
 
-        public bool IsValid(string _username, string _password)
-        {
+             
             //using (var cn = new SqlConnection(@"Data Source=Data Source=h2437976.stratoserver.net;Initial Catalog=Productiesysteem;User ID=Daan;Password=Maaskantje_95"))
             //{
             //    string _sql = @"SELECT [gebruikersnaam] FROM [dbo].[tbl_login] " +
@@ -57,7 +64,7 @@ namespace ProductieSysteem.Models
             //        return false;
             //    }
             //}
-            return true;
+           // return true;
         }
     }
 }
