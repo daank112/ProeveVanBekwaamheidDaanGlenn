@@ -1,0 +1,12 @@
+﻿@model IEnumerable<ProductieSysteem1.Models.Categorie>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach (var m in Model)
+{
+    <p>@m.Cat_id</p>
+    <p>@m.StartGewicht</p>
+}

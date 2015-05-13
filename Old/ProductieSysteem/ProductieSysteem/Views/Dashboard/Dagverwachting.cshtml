@@ -1,0 +1,11 @@
+﻿@model IEnumerable<ProductieSysteem.Models.Categorie>
+@{
+    ViewBag.Title = "Dagverwachting";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Dagverwachting</h2>
+@foreach (var p in Model)
+{
+    @p.Cat_id
+}
