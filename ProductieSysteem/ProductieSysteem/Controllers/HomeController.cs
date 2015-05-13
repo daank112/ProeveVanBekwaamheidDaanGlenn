@@ -19,10 +19,10 @@ namespace ProductieSysteem.Controllers
 
         public ActionResult Index()
         {
-            var GebruikersList = from m in db.Gebruikers
+         /*   var GebruikersList = from m in db.Gebruikers
                                  where m.voornaam == "daan"
-                                 select m;
-            return View(GebruikersList.ToList());
+                                 select m;*/
+           return View(/*GebruikersList.ToList()*/);
         }
         public ActionResult Login()
         {
