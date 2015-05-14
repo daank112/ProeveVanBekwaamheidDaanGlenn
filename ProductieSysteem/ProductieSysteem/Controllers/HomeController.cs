@@ -19,51 +19,51 @@ namespace ProductieSysteem.Controllers
 
         public ActionResult Index()
         {
-<<<<<<< HEAD
+
          /*   var GebruikersList = from m in db.Gebruikers
                                  where m.voornaam == "daan"
                                  select m;*/
            return View(/*GebruikersList.ToList()*/);
         }
-        public ActionResult Login()
-        {
+        //public ActionResult Login()
+        //{
 
-            if (Request.IsAuthenticated == true)
-            {
-                return RedirectToAction("Index", "Dashboard");
-            }
-            else
-            {
-                return View();
-            }
-        }
-        [HttpPost]
-        public ActionResult Login(Models.Login user)
-        {
+        //    if (Request.IsAuthenticated == true)
+        //    {
+        //        return RedirectToAction("Index", "Dashboard");
+        //    }
+        //    else
+        //    {
+        //        return View();
+        //    }
+        //}
+        //[HttpPost]
+        //public ActionResult Login(Models.Login user)
+        //{
 
-            if (ModelState.IsValid)
-            {
-                if (user.IsValid(user.gebruikersnaam, user.wachtwoord))
-                {
+        //    if (ModelState.IsValid)
+        //    {
+        //        if (user.IsValid(user.gebruikersnaam, user.wachtwoord))
+        //        {
 
-                    FormsAuthentication.SetAuthCookie(user.gebruikersnaam, user.RememberMe);
+        //            FormsAuthentication.SetAuthCookie(user.gebruikersnaam, user.RememberMe);
 
-                    return RedirectToAction("Index", "Dashboard");
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Fout!");
-                }
-            }
-            return View(user);
-=======
-            //var GebruikersList = from m in db.Gebruikers
-            //                     where m.voornaam == "daan"
-            //                     select m;
-            //GebruikersList.ToList()
-            return View();
->>>>>>> origin/master
-        }
+        //            return RedirectToAction("Index", "Dashboard");
+        //        }
+        //        else
+        //        {
+        //            ModelState.AddModelError("", "Fout!");
+        //        }
+        //    }
+        //    return View(user);
+
+        //    //var GebruikersList = from m in db.Gebruikers
+        //    //                     where m.voornaam == "daan"
+        //    //                     select m;
+        //    //GebruikersList.ToList()
+        //    return View();
+
+        //}
         
     }
 }

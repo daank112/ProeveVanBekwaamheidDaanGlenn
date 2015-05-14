@@ -17,11 +17,14 @@ namespace ProductieSysteem.Controllers
         {
             return View();
         }
+
+
         [HttpGet]
-        public ActionResult Login(string returnUrl)
+        public ActionResult Login()
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult Login(Models.Login user)
         {
@@ -29,21 +32,20 @@ namespace ProductieSysteem.Controllers
             {
                 if (user.IsValid(user.gebruikersnaam, user.wachtwoord))
                 {
-                    FormsAuthentication.SetAuthCookie(user.gebruikersnaam, user.RememberMe);
-                    return RedirectToAction("Index", "Home");
+                    FormsAuthentication.SetAuthCookie(user.gebruikersnaam, user.OnthoudMij);
+                    return RedirectToAction("Index", "Dashboard");
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Foutieve gebruikersnaam en of wachtwoord!");
+                    ModelState.AddModelError("", "Gebruikersnaam en of wachtwoord zijn incorect!!");
                 }
             }
             return View(user);
         }
-        public ActionResult LogOut()
+        public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
-            return RedirectToAction("Login", "Account");
+            return RedirectToAction("Index", "Home");
         }
-        
     }
 }
