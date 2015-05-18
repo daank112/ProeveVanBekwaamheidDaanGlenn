@@ -6,8 +6,9 @@ using System.Web;
 
 namespace ProductieSysteem.Models
 {
-    public class Gebruikers
+    public class tbl_gebruikers
     {
+        [Key]
         public int gebruikersId { get; set; }
         public string voornaam { get; set; }
         public string achternaam { get; set; }
@@ -17,7 +18,5 @@ namespace ProductieSysteem.Models
         public string postcode { get; set; }
         public string email { get; set; }
         public Nullable<int> gebruikersType { get; set; }
-       
     }
-    
 }

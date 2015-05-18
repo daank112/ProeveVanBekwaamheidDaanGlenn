@@ -1,6 +1,7 @@
 ﻿using ProductieSysteem.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -50,22 +51,55 @@ namespace ProductieSysteem.Controllers
         }
         public ActionResult NieuweGebruiker()
         {
-            ViewBag.gebruikersId = new SelectList(db.tbl_login, "gebruikersId", "Voornaam");
+            //ViewBag.gebruikersId = new SelectList(db.tbl_gebruikers, "gebruikersId", "Voornaam");
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult NieuweGebruiker([Bind(Include = "gebruikersId,gebruikersnaam,wachtwoord")] Login login)
+        public ActionResult NieuweGebruiker([Bind(Include = "gebruikersId,voornaam,achternaam,bedrijfsnaam,adres,plaats,postcode,email,gebruikersType")] tbl_gebruikers gebruiker)
         {
             if (ModelState.IsValid)
-            {               
-                db.tbl_login.Add(login);
+            {
+                db.tbl_gebruikers.Add(gebruiker);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.gebruikersId = new SelectList(db.tbl_login, "gebruikersId", "voornaam",  login);
-            return View(login);
+           // ViewBag.gebruikersId = new SelectList(db.tbl_gebruikers, "gebruikersId", "voornaam",  gebruiker);
+            return View(gebruiker);
         }
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: tbl_gebruikers/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "gebruikersId,voornaam,achternaam,bedrijfsnaam,adres,plaats,postcode,email,gebruikersType")] tbl_gebruikers gebruiker)
+        {
+       
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    db.tbl_gebruikers.Add(gebruiker);
+                    db.SaveChanges();
+                    db.GetValidationErrors();
+                    
+                    return RedirectToAction("Index");
+                }
+            }
+            catch (Exception e)
+            {
+                e.ToString();
+            }
+           
+
+            return View(gebruiker);
+        }
+
     }
 }

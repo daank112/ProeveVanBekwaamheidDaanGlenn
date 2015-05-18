@@ -135,8 +135,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DbContext.cs" />
-    <Compile Include="Models\Gebruikers.cs" />
     <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\tbl_gebruikers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +145,8 @@
     <Content Include="Views\Shared\_UserLayout.cshtml" />
     <Content Include="Views\Dashboard\index.cshtml" />
     <Content Include="Views\Account\NieuweGebruiker.cshtml" />
+    <Content Include="Views\Account\index.cshtml" />
+    <Content Include="Views\Account\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
