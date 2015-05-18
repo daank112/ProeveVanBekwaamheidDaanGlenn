@@ -12,6 +12,7 @@ namespace ProductieSysteem.Controllers
 {
     public class AccountController : Controller
     {
+        DefaultConnection db = new DefaultConnection();
         // GET: Account
         public ActionResult Index()
         {
@@ -46,6 +47,25 @@ namespace ProductieSysteem.Controllers
         {
             FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home");
+        }
+        public ActionResult NieuweGebruiker()
+        {
+            ViewBag.gebruikersId = new SelectList(db.tbl_login, "gebruikersId", "Voornaam");
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult NieuweGebruiker([Bind(Include = "gebruikersId,gebruikersnaam,wachtwoord")] Login login)
+        {
+            if (ModelState.IsValid)
+            {               
+                db.tbl_login.Add(login);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.gebruikersId = new SelectList(db.tbl_login, "gebruikersId", "voornaam",  login);
+            return View(login);
         }
     }
 }

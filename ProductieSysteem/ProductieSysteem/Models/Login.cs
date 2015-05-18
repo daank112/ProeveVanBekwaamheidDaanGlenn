@@ -13,7 +13,7 @@ namespace ProductieSysteem.Models
     {
         [Key]
         [Display(Name = "Id")]
-        public string id { get; set; }
+        public int gebruikersId { get; set; }
 
         [Required]
         [Display(Name = "User name")]

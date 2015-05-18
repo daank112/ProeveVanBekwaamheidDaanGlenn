@@ -144,6 +144,7 @@
     <Content Include="packages.config" />
     <Content Include="Views\Shared\_UserLayout.cshtml" />
     <Content Include="Views\Dashboard\index.cshtml" />
+    <Content Include="Views\Account\NieuweGebruiker.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
