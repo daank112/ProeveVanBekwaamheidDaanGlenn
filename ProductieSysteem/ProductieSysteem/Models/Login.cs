@@ -16,23 +16,17 @@ namespace ProductieSysteem.Models
         public int gebruikersId { get; set; }
 
         [Required]
-        [Display(Name = "User name")]
+        [Display(Name = "Gebruikersnaam")]
         public string gebruikersnaam { get; set; }
  
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Wachtwoord")]
         public string wachtwoord { get; set; }
  
-        [Display(Name = "Remember on this computer")]
+        [Display(Name = "Onthoud mij op deze computer")]
         public bool OnthoudMij { get; set; }
         
-        /// <summary>
-        /// Checks if user with given password exists in the database
-        /// </summary>
-        /// <param name="_username">User name</param>
-        /// <param name="_password">User password</param>
-        /// <returns>True if user exist and password is correct</returns>
         public bool IsValid(string _username, string _password)
         {
             DefaultConnection df = new DefaultConnection();
