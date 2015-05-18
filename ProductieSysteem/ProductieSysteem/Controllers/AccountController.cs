@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -28,13 +29,13 @@ namespace ProductieSysteem.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(Models.Login user)
+        public ActionResult Login(Models.login user)
         {
             if (ModelState.IsValid)
             {
                 if (user.IsValid(user.gebruikersnaam, user.wachtwoord))
                 {
-                    FormsAuthentication.SetAuthCookie(user.gebruikersnaam, user.OnthoudMij);
+                    //FormsAuthentication.SetAuthCookie(user.gebruikersnaam );
                     return RedirectToAction("Index", "Dashboard");
                 }
                 else
@@ -56,11 +57,11 @@ namespace ProductieSysteem.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult NieuweGebruiker([Bind(Include = "gebruikersId,voornaam,achternaam,bedrijfsnaam,adres,plaats,postcode,email,gebruikersType")] tbl_gebruikers gebruiker)
+        public ActionResult NieuweGebruiker([Bind(Include = "gebruikersId,voornaam,achternaam,bedrijfsnaam,adres,plaats,postcode,email,gebruikersType")] gebruikers gebruiker)
         {
             if (ModelState.IsValid)
             {
-                db.tbl_gebruikers.Add(gebruiker);
+                db.gebruikers.Add(gebruiker);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -78,14 +79,17 @@ namespace ProductieSysteem.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "gebruikersId,voornaam,achternaam,bedrijfsnaam,adres,plaats,postcode,email,gebruikersType")] tbl_gebruikers gebruiker)
+        public ActionResult Create([Bind(Include = "gebruikersnaam,wachtwoord")] login login, string wachtwoord)
         {
        
             try
             {
                 if (ModelState.IsValid)
                 {
-                    db.tbl_gebruikers.Add(gebruiker);
+
+                    string passwordIsHashed = login.PasswordHash(wachtwoord);
+                    login.wachtwoord = passwordIsHashed;
+                    db.login.Add(login);
                     db.SaveChanges();
                     db.GetValidationErrors();
                     
@@ -98,7 +102,7 @@ namespace ProductieSysteem.Controllers
             }
            
 
-            return View(gebruiker);
+            return View(login);
         }
 
     }

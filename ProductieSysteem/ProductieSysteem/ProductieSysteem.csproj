@@ -136,6 +136,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DbContext.cs" />
+    <Compile Include="Models\gebruikers.cs" />
+    <Compile Include="Models\gebruikersType.cs" />
+    <Compile Include="Models\g_regel.cs" />
+    <Compile Include="Models\login.cs" />
+    <Compile Include="Models\producten.cs" />
+    <Compile Include="Models\weekproductie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -155,7 +162,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Helpers\Helpers.csproj">
