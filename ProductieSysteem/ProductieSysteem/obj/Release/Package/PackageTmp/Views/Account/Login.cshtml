@@ -1,0 +1,47 @@
+﻿@model ProductieSysteem.Models.Login
+@{
+    ViewBag.Title = "Login";
+}
+
+
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4 col-xs-12 LoginForm">
+        <section id="loginForm">
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary(true, "Login failed. Check your login details.");
+                <div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.gebruikersnaam, new { @class = "col-md-4  control-label" })
+                        <div class="col-xs-12">
+                            @Html.TextBoxFor(m => m.gebruikersnaam, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.gebruikersnaam, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.wachtwoord, new { @class = "col-md-4  control-label" })
+                        <div class="col-md-12">
+                            @Html.PasswordFor(m => m.wachtwoord, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.wachtwoord, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-10">
+                            <div class="checkbox">
+                                @Html.CheckBoxFor(m => m.OnthoudMij)
+                                @Html.LabelFor(m => m.OnthoudMij)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10 col-xs-12">
+                            <input type="submit" value="Log in" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </section>
+    </div>
+</div>
