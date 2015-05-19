@@ -45,3 +45,11 @@ C:\Users\Glenn\Documents\GitHub\ProeveVanBekwaamheidDaanGlenn\ProductieSysteem\P
 C:\Users\Glenn\Documents\GitHub\ProeveVanBekwaamheidDaanGlenn\ProductieSysteem\ProductieSysteem\obj\Debug\ProductieSysteem.csprojResolveAssemblyReference.cache
 C:\Users\Glenn\Documents\GitHub\ProeveVanBekwaamheidDaanGlenn\ProductieSysteem\ProductieSysteem\obj\Debug\ProductieSysteem.dll
 C:\Users\Glenn\Documents\GitHub\ProeveVanBekwaamheidDaanGlenn\ProductieSysteem\ProductieSysteem\obj\Debug\ProductieSysteem.pdb
+C:\Users\Glenn\Documents\GitHub\ProeveVanBekwaamheidDaanGlenn\ProductieSysteem\ProductieSysteem\bin\Newtonsoft.Json.dll
+C:\Users\Glenn\Documents\GitHub\ProeveVanBekwaamheidDaanGlenn\ProductieSysteem\ProductieSysteem\bin\System.Net.Http.Formatting.dll
+C:\Users\Glenn\Documents\GitHub\ProeveVanBekwaamheidDaanGlenn\ProductieSysteem\ProductieSysteem\bin\System.Web.Http.dll
+C:\Users\Glenn\Documents\GitHub\ProeveVanBekwaamheidDaanGlenn\ProductieSysteem\ProductieSysteem\bin\System.Web.Http.WebHost.dll
+C:\Users\Glenn\Documents\GitHub\ProeveVanBekwaamheidDaanGlenn\ProductieSysteem\ProductieSysteem\bin\Newtonsoft.Json.xml
+C:\Users\Glenn\Documents\GitHub\ProeveVanBekwaamheidDaanGlenn\ProductieSysteem\ProductieSysteem\bin\System.Net.Http.Formatting.xml
+C:\Users\Glenn\Documents\GitHub\ProeveVanBekwaamheidDaanGlenn\ProductieSysteem\ProductieSysteem\bin\System.Web.Http.xml
+C:\Users\Glenn\Documents\GitHub\ProeveVanBekwaamheidDaanGlenn\ProductieSysteem\ProductieSysteem\bin\System.Web.Http.WebHost.xml
