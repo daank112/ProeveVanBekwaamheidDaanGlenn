@@ -17,10 +17,12 @@ namespace ProductieSysteem.Controllers
         }
         public ActionResult ProductieOpgeven()
         {
+            ViewData["Message"] = "Productie opgeven";
             return View();
         }
         public ActionResult ProductieBijstellen()
         {
+            ViewData["Message"] = "Productie bijstellen";
             return View();
         }
     }

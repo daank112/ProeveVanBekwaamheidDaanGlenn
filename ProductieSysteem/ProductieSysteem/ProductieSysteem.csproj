@@ -180,6 +180,8 @@
     <Content Include="Views\Account\index.cshtml" />
     <Content Include="Views\Account\Create.cshtml" />
     <Content Include="Views\Productie\index.cshtml" />
+    <Content Include="Views\Productie\ProductieOpgeven.cshtml" />
+    <Content Include="Views\Productie\ProductieBijstellen.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
