@@ -162,12 +162,6 @@
     <Compile Include="Models\producten.cs" />
     <Compile Include="Models\weekproductie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Productie\index.cshtml.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Productie\index.cshtml.designer.cs">
-      <DependentUpon>index.cshtml.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config">

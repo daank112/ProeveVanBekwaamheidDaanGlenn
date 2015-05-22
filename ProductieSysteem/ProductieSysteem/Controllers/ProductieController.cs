@@ -18,8 +18,21 @@ namespace ProductieSysteem.Controllers
         public ActionResult ProductieOpgeven()
         {
             ViewData["Message"] = "Productie opgeven";
-            return View();
+           // return View();
+                List<SelectListItem> items = new List<SelectListItem>();
+
+                items.Add(new SelectListItem { Text = "  ", Value = "0" });
+                items.Add(new SelectListItem { Text = "Komkommer", Value = "1" });
+                items.Add(new SelectListItem { Text = "Tomaat", Value = "0" });
+                items.Add(new SelectListItem { Text = "Paprika", Value = "0" });
+
+
+
+                ViewBag.Dagdelen = items;
+                return View();
         }
+
+
         public ActionResult ProductieBijstellen()
         {
             ViewData["Message"] = "Productie bijstellen";

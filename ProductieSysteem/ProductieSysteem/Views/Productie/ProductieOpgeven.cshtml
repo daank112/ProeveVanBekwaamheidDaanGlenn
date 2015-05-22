@@ -6,25 +6,28 @@
 
 <h2>Productie Opgeven</h2>
 
-<p>testtesttetsttestsetstttestetsettesttest</p>
-
-<table id="product" style="border-color:black" 
+<form action="~/Views/Productie/ProductieBijstellen"
+<table>
     <tr>
-        <th>11</th>
-        <th>12</th>
-        <th>13</th>
-        <th>14</th>
-    </tr> 
+        <td>week</td>
+        <td>Product</td>
+        <td>Aantal</td>
+        <td></td>
+    </tr>
     <tr>
-        <td>01</td>
-        <td>01</td>
-        <td>01</td>
-        <td>01</td>
+        <td>hier moet een kalender komen</td>
+        <td>@Html.DropDownList("Dagdelen")</td>
+        <td>hier moet een veld komen waar alleen cijfers ingevuld kunnen worden</td>
+        <td><input type="submit" value="opslaan" /></td>
     </tr>
 </table>
+</form>
 
-<form action="action_page.php">
+@*@Html.DropDownList("Dagdelen")*@
+
+
+@*<form action="action_page.php">
   selecteer een week:
   <input type="week" name="year_week">
-</form>
+</form>*@
 

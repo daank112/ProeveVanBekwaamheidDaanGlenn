@@ -13,5 +13,26 @@ namespace ProductieSysteem.Controllers
         {
             return View();
         }
+
+        //public ActionResult Index()
+        //{
+            
+        //        //User user = db.User.Find();
+        //    List<SelectListItem> items = new List<SelectListItem>();
+
+        //    items.Add(new SelectListItem { Text = "Vlees met bami!", Value = "0" });
+        //        items.Add(new SelectListItem { Text = "Ochtend", Value = "1" });
+        //        items.Add(new SelectListItem { Text = "Middag", Value = "0" });
+        //        items.Add(new SelectListItem { Text = "Avond", Value = "0" });
+
+
+
+        //        ViewBag.Dagdelen = items;
+        //        return View ();
+               
+
+            
+        //}
+
     }
 }
